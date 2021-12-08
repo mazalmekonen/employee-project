@@ -6,9 +6,9 @@ export interface Employee {
     
     lname: string;
 
-    //dateofbirth: string;
+    dateofbirth: string;
 
-    //salary: string;
+    salary: string;
 
-    //email: string;
+    email: string;
 }
