@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Employee } from '../employee';
 
-
 @Component({
   selector: 'app-employee-detail',
   templateUrl: './employee-detail.component.html',
@@ -13,5 +12,6 @@ export class EmployeeDetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  @Input() employee?: Employee;
 
 }

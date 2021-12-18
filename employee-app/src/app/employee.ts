@@ -12,3 +12,14 @@ export interface Employee {
 
     email: string;
 }
+export interface button1 {
+
+   to: string;
+    
+   cc: string;
+    
+   subject: string;
+
+    mymessage: string;
+
+}
