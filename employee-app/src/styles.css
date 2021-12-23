@@ -1,17 +1,19 @@
 h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
-  }
-  body {
-    margin: 2em;
-    background-color: wheat;
-  }
-  body, input[type="text"], button {
-    color: #333;
-    font-family: Cambria, Georgia, serif;
-    
-  }
-  * {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+  display: flex;
+  justify-content: center;
+}
+body {
+  margin: 2em;
+  background-color: wheat;
+}
+body, input[type="text"], button {
+  color: #333;
+  font-family: Cambria, Georgia, serif;
+  
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
