@@ -1,3 +1,4 @@
+
 input {
     padding: 0.4em;
     display: inline-flex;
@@ -28,4 +29,22 @@ h2{
 
 label {
   font-weight: 700;
+}
+
+button {
+  color: #333;
+  background-color: #eee;
+  margin-bottom: 12px;
+  padding: 0.7rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button:hover {
+  color: #db0e0e;
+  background-color: #d8d2d2;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
 }
