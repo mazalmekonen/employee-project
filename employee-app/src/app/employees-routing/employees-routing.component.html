@@ -1,0 +1,31 @@
+<h2>My Staff</h2>
+<div>
+    <label for="new-employee">Employee First Name: </label>
+    <input id="new-employee" #employeeName />
+  
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="add-button" (click)="add(employeeName.value); employeeName.value=''">
+      Add Employee
+    </button>
+    <br>
+    <br>
+  </div>
+
+<div class="wrapper">
+<div>
+<table class="employees">
+    <tr class="mainrow"><th>Check all</th><th>Employee ID</th><th>First Name</th><th>Last Name</th><th>Date of birth</th><th>Salary</th><th>E-mail</th></tr> 
+    <tr *ngFor="let employee of employees" class="employees">  
+         <td class="employees"><!--<input type="checkbox">--><button class="delete" title="delete employee" 
+          (click)="delete(employee)">x</button></td> 
+         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.id}}</td> 
+         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.fname}}</td>
+         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.lname}}</td>
+         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.dateofbirth}}</td>
+         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.salary}}</td>
+         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.email}}</td> 
+        </tr>
+             
+</table>
+</div>
+</div>
