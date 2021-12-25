@@ -1,0 +1,21 @@
+<div *ngif="employee">
+    <div class="visitcard">
+        <h2>sending e-mail to:{{employee.fname | uppercase}} {{employee.lname | uppercase}}</h2>    
+        <div class="form">
+          <label for="to">to: </label><input id= "to" placeholder="to">
+
+          <label for="cc">cc: </label>
+          <input id="cc"placeholder="cc">
+          
+          <label for="subject">subject: </label>
+          <input id="subject" placeholder="subject">
+          
+          <label for="my-massage">my massage: </label> 
+          <textarea id="my-massage"></textarea>    
+          <input type="button" value="send" class="sendbutton"(click)="onselect(employee)">
+        </div>
+    </div>
+</div>
+    
+
+    <br>

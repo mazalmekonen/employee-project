@@ -1,26 +1,29 @@
 <div *ngIf="employee">
-    <div class="visitcard">
-      <h2>{{employee.fname | uppercase}} {{employee.lname | uppercase}}</h2>    
-    <div class="form">
-      <label for="employee-id">ID: </label> {{employee.id}}
-      <label for="employee-fname">Employee first name: </label>
-      <input id="employee-fname" [(ngModel)]="employee.fname" placeholder="fname">
-      
-      <label for="employee-lname">Employee last name: </label>
-      <input id="employee-lname" [(ngModel)]="employee.lname" placeholder="lname">
-      
-      <label for="employee-dateofbirth">Date of birth: </label> {{employee.dateofbirth}}    
-      
-      <label for="employee-salary">Salary: </label>
-      <input id="employee-salary" [(ngModel)]="employee.salary" placeholder="salary">
+  <div class="visitcard">
+    <h2>{{employee.fname | uppercase}} {{employee.lname | uppercase}}</h2>    
+  <div class="form">
+    <label for="employee-id">ID: </label> {{employee.id}}
+    <label for="employee-fname">Employee first name: </label>
+    <input id="employee-fname" [(ngModel)]="employee.fname" placeholder="fname">
     
-      <label for="employee-salary">E-mail: </label>
-      <a href="mailto:{{employee.email}}">{{employee.email}}</a>
-      <input type="button" name="button1" value="send">
-    </div>
+    <label for="employee-lname">Employee last name: </label>
+    <input id="employee-lname" [(ngModel)]="employee.lname" placeholder="lname">
     
-    </div>
+    <label for="employee-dateofbirth">Date of birth: </label> 
+    <input id="employee-dateofbirth" [(ngModel)]="employee.dateofbirth" placeholder="dateofbirth">    
     
+    <label for="employee-salary">Salary: </label>
+    <input id="employee-salary" [(ngModel)]="employee.salary" placeholder="salary">
+  
+    <label for="employee-salary">E-mail: </label>
+    <div><input id="employee-email" [(ngModel)]="employee.email" placeholder="email"></div><input type="button" value="send email"(click)="onselect(employee)"></div>
+  
   </div>
-    <br>
- 
+  <button (click)="save()">save</button>
+  <br>
+  <button (click)="goBack()">Go back</button>
+  <br> <br>
+<div>
+  <app-sendemail [employee]="selectedEmployee"></app-sendemail>
+  </div>
+</div>

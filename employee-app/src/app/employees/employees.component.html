@@ -1,26 +1,29 @@
+
 <h2>My Staff</h2>
-<div class="wrapper">
 <div>
+    <label for="new-employee">Employee First Name: </label>
+    <input id="new-employee" #employeeName />
+  
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="add-button" (click)="add(employeeName.value); employeeName.value=''">
+      Add Employee
+    </button>
+    <br>
+    <br>
+  </div>
+
+<div class="wrapper">
 <table class="employees">
     <tr class="mainrow"><th>Check all</th><th>Employee ID</th><th>First Name</th><th>Last Name</th><th>Date of birth</th><th>Salary</th><th>E-mail</th></tr> 
-    <tr *ngFor="let employee of employees" class="employees">
-
-      <td class="employees"><input type="checkbox"></td>
-      
-      <td class="employees"><a routerLink="/detail/{{employee.id}}">{{employee.id}}</a></td>
-      
-      <td class="employees"><a routerLink="/detail/{{employee.id}}">{{employee.fname}}</a></td>
-      
-      <td class="employees"><a routerLink="/detail/{{employee.id}}">{{employee.lname}}</a></td>
-      
-      <td class="employees"><a
-      routerLink="/detail/{{employee.id}}">{{employee.dateofbirth}}</a></td>
-      
-      <td class="employees"><a routerLink="/detail/{{employee.id}}">{{employee.salary}}</a></td>
-      
-      <td class="employees"><a routerLink="/detail/{{employee.id}}">{{employee.email}}</a></td>
-      
-      </tr>    
+    <tr *ngFor="let employee of employees" class="employees" [class.selected]="employee === selectedEmployee" (click)="onSelect(employee)">     
+        <td class="employees"> 
+        <td class="employees">{{employee.id}}</td> 
+        <td class="employees">{{employee.fname}}</td>
+        <td class="employees">{{employee.lname}}</td>
+        <td class="employees">{{employee.dateofbirth}}</td>
+        <td class="employees">{{employee.salary}}</td>
+        <td class="employees">{{employee.email}}</td>
+    </tr>     
 </table>
 </div>
 <!-- <ul class="employees">
@@ -31,9 +34,6 @@
 
 <app-employee-detail [employee]="selectedEmployee"></app-employee-detail>
 
-</div>
-<div>
-<!-- <app-sendemail [employee]="selectedEmployee"></app-sendemail> -->
 </div>
 <!-- <div *ngIf="selectedEmployee">
   <h2>{{selectedEmployee.fname | uppercase}} {{selectedEmployee.lname | uppercase}} Details</h2>
@@ -46,4 +46,3 @@
     <input id="employee-lname" [(ngModel)]="selectedEmployee.lname" placeholder="lname">
   </div>
 </div> -->
-

@@ -7,10 +7,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 const routes: Routes = [
- { path: 'detail/:id', component: EmployeeDetailComponent },
+{ path: 'home', component: DashboardComponent },
+{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 { path: 'dashboard', component: DashboardComponent },
-{ path: 'employees', component: EmployeesComponent }
-// { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+{ path: 'employees', component: EmployeesComponent },
+{ path: 'employees-routing',component: EmployeesRoutingComponent },
+ { path: 'detail/:id', component: EmployeeDetailComponent },
 
 ];
 

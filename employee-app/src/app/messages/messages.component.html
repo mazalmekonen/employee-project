@@ -1,24 +1,13 @@
 <div *ngIf="messageService.messages.length else elseBlock">
 
     <h2>Messages</h2>
-    
     <button class="clear"
-    
-    (click)="messageService.clear()">Clear messages</button>
-    
-    <div *ngFor='let message of messageService.messages'> {{message}}
-    </div>
-    
-    </div>
-    
-    <ng-template #elseBlock>
-    
-    <h2>Messages</h2>
-    
-    <div>No new messages</div>
-    
-    </ng-template>
-    
-    <br>
-    
-    <br>
+            (click)="messageService.clear()">Clear messages</button>
+    <div *ngFor='let message of messageService.messages'> {{message}} </div>
+  
+  </div>
+  <ng-template #elseBlock>
+        <h2>Messages</h2>
+        <div>No new messages</div>
+        </ng-template>
+  <br>
