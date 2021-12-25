@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 h1 {
   margin-bottom: 0;
 }
@@ -24,3 +25,31 @@ nav a.active {
   background-color: black;
   color: white;
 }
+=======
+h1 {
+  margin-bottom: 0;
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  padding: 1rem;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #505050;
+  border-radius: 4px;
+  margin: 8px;
+}
+
+nav a:hover {
+  color: #db0e0e;
+background-color: #d8d2d2;
+}
+nav a.active {
+  background-color: black;
+  color: white;
+}
+>>>>>>> 0ec57462bb1b7f37048cdef1b44071fed185e6ca

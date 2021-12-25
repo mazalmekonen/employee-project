@@ -1,4 +1,5 @@
 h2 {
+<<<<<<< HEAD
     text-align: center;
   }
   
@@ -48,6 +49,9 @@ h2 {
   }
   h2 {
     text-align: center;
+=======
+    text-align: center;
+>>>>>>> 0ec57462bb1b7f37048cdef1b44071fed185e6ca
   }
   
   .employees-menu {
@@ -93,4 +97,8 @@ h2 {
   
   a:hover {
     background-color: #000;
+<<<<<<< HEAD
   }
+=======
+  }
+>>>>>>> 0ec57462bb1b7f37048cdef1b44071fed185e6ca

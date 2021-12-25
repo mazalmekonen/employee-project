@@ -65,8 +65,12 @@ delete(employee: Employee): void {
   
   }
 
+<<<<<<< HEAD
   
   }
  
   
   
+=======
+}
+>>>>>>> 0ec57462bb1b7f37048cdef1b44071fed185e6ca

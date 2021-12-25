@@ -18,6 +18,7 @@ export class EmployeeDetailComponent implements OnInit {
     private employeeService: EmployeeService,
     private location: Location
 
+<<<<<<< HEAD
      ) {}
      selectedEmployee?:Employee;
      employees:Employee[] = [];
@@ -25,6 +26,13 @@ export class EmployeeDetailComponent implements OnInit {
      onselect(employee :Employee):void{
        this.selectedEmployee=employee;
      }
+=======
+  constructor(
+    private route: ActivatedRoute,
+    private employeeService: EmployeeService,
+    private location: Location
+     ) {}
+>>>>>>> 0ec57462bb1b7f37048cdef1b44071fed185e6ca
     
 
   ngOnInit(): void {

@@ -12,5 +12,10 @@ export class MessageService {
   clear() {
      this.messages = [];
      }
+<<<<<<< HEAD
      constructor() { }  
+=======
+    
+  constructor() { }
+>>>>>>> 0ec57462bb1b7f37048cdef1b44071fed185e6ca
 }
